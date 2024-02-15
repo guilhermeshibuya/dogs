@@ -27,10 +27,6 @@
   grid-row: 1 / 4;
 }
 
-.comments {
-  padding: 0 2rem;
-}
-
 @media (max-width: 64rem) {
   .photo {
     height: auto;
