@@ -6,6 +6,7 @@ import LoginPasswordReset from './LoginPasswordReset';
 import { useContext } from 'react';
 import { UserContext } from '../../UserContext';
 import styles from './Login.module.css';
+import NotFound from '../NotFound.jsx';
 
 const Login = () => {
   const { isLoggedIn } = useContext(UserContext);
@@ -20,6 +21,7 @@ const Login = () => {
           <Route path="criar" element={<LoginCreate />} />
           <Route path="perdeu" element={<LoginPasswordLost />} />
           <Route path="resetar" element={<LoginPasswordReset />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </section>
