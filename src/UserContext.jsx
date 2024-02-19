@@ -33,7 +33,7 @@ export const UserStorage = ({ children }) => {
       setIsLoading(true);
       const { url, options } = TOKEN_POST({ username, password });
       const tokenRes = await fetch(url, options);
-      if (!tokenRes.ok) throw new Error(`Erro: usuário ou senha inválidos`);
+      if (!tokenRes.ok) throw new Error('Dados inválidos.');
       const { token } = await tokenRes.json();
       window.localStorage.setItem('token', token);
       await getUser(token);
